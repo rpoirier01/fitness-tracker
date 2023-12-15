@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Fitness Tracker!</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
+        <script type="module" src="main.js" defer></script>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div id="select-ui">
+            <label for = 'date'>Select Date</label>
+            <select id = 'date'></select>
+
+            <select id = 'exercise1' class="exercise-selectors"></select>
+            <input type="number" id = 'time1'>
+            <select id ='minHour1'>
+                <option>Hours</option>
+                <option>Minutes</option>
+            </select>
+
+            <select id = 'exercise2' class="exercise-selectors"></select>
+            <input type="number" id = 'time2'>
+            <select id ='minHour2'>
+                <option>Hours</option>
+                <option>Minutes</option>
+            </select>
+
+            <select id = 'exercise3' class="exercise-selectors"></select>
+            <input type="number" id = 'time3'>
+            <select id ='minHour3'>
+                <option>Hours</option>
+                <option>Minutes</option>
+            </select>
+
+            <select id = 'exercise4' class="exercise-selectors"></select>
+            <input type="number" id = 'time4'>
+            <select id ='minHour4'>
+                <option>Hours</option>
+                <option>Minutes</option>
+            </select>
+        </div>
+        <div id="graph-ui">
+            <div style = 'width: 700px'><canvas id='caloriesBurned'></canvas></div>
+            <button id = 'addButton'>Add Exercises!</button>
+            <button id = 'removeButton'>Remove Exercises</button>
+            <button id = 'customButton'>Custom Exercise</button>
+        </div>
+        <!-- chatGPT helped significantly here down -->
+        <div id='customHolder' class="modal">
+            <div class="subwindowContent">
+                <div id="addUI" class="row">
+                    <label for="addNameInput">Exercise Name</label>
+                    <input id="addNameInput">
+                    <label for="addCatInput">Category</label>
+                    <input id="addCatInput">
+                    <label for="addCalsInput">Calories/Hour</label>
+                    <input type="number" id="addCalsInput">
+                    <button id="add">New Exercise!</button>
+                </div>
+                <div id="updateUI" class="row">
+                    <label for="oldNameInput">Exercise Name</label>
+                    <input id="oldNameInput">
+                    <label for="newNameInput">New Name</label>
+                    <input id="newNameInput">
+                    <label for="newCatInput">Category</label>
+                    <input id="newCatInput">
+                    <label for="newCalsInput">Calories/Hour</label>
+                    <input type="number" id="newCalsInput">
+                    <button id="updateButton">Update!</button>
+                </div>
+                <div id="deleteUI" class="row">
+                    <label for="deleteNameInput">Exercise Name</label>
+                    <input id="deleteNameInput">
+                    <button id="deleteButton">Delete!</button>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
